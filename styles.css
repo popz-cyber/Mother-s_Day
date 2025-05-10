@@ -6,17 +6,19 @@ body {
     background-size: cover;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 .container {
     max-width: 90vw;
-    height: auto;
     position: relative;
     margin: 0 auto;
     top: 50%;
     transform: translateY(-50%);
     text-align: center;
     padding: 20px;
+    height: auto;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -24,14 +26,16 @@ h1 {
     font-weight: 500;
     font-style: normal;
     padding: 10px;
-    font-size: 6vw;
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    line-height: 1.2;
+    overflow-wrap: break-word;
 }
 
 .letter {
-    left: 5vw;
     width: 100%;
     height: auto;
     display: inline-block;
+    word-wrap: break-word;
 }
 
 .rose {
@@ -144,7 +148,6 @@ h1 {
     transform: rotate(120deg);
 }
 
-/* Animations */
 @keyframes yid {
     50% {
         transform: translateY(35%);
@@ -172,15 +175,22 @@ h1 {
     }
 }
 
-/* Responsive layout tweaks */
+/* Responsive tweaks */
 @media (max-width: 600px) {
     .container {
+        position: static;
         transform: none;
-        top: auto;
-        padding-top: 20vh;
+        padding-top: 10vh;
     }
+
     .rose {
-        width: 30vw;
-        right: 10px;
+        position: relative;
+        transform: none;
+        margin: 0 auto;
+        display: block;
+    }
+
+    h1 {
+        font-size: 6vw;
     }
 }
