@@ -27,6 +27,7 @@ h1{
     height: 400px;
     display: inline-block;
     overflow-wrap: break-word;
+    position: absolute;
 }
 
 .rose{
