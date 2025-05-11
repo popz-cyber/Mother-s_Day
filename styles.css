@@ -28,6 +28,7 @@ h1 {
     font-size: clamp(1.5rem, 5vw, 3rem);
     line-height: 1.2;
     overflow-wrap: break-word;
+    padding: 10px;
 }
 
 .letter {
@@ -35,6 +36,8 @@ h1 {
     height: auto;
     display: inline-block;
     word-wrap: break-word;
+    margin: 10px;
+    padding: 10px;
 }
 
 .rose {
