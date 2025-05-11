@@ -1,49 +1,37 @@
-body {
+body{
     background: #fadede;
     background-image: url(Pictures/bottom_Rose.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
 }
 
-.container {
-    max-width: 90vw;
-    position: relative;
-    margin: 0 auto;
+.container{
+    width: 800px;
+    height: 400px;
+    position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    padding: 20px;
-    height: auto;
-    box-sizing: border-box;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-h1 {
+h1{
     font-family: "Swanky and Moo Moo", cursive;
     font-weight: 500;
     font-style: normal;
-    font-size: clamp(1.5rem, 5vw, 3rem);
-    line-height: 1.2;
-    overflow-wrap: break-word;
     padding: 10px;
 }
 
-.letter {
-    width: 100%;
-    height: auto;
+.letter{
+    width: 600px;
+    height: 400px;
     display: inline-block;
-    word-wrap: break-word;
-    margin: 10px;
-    padding: 10px;
+    overflow-wrap: break-word;
 }
 
-.rose {
-    width: 40vw;
-    max-width: 200px;
-    height: auto;
+.rose{
+    width: 200px;
+    height: 200px;
     position: absolute;
     right: 0;
     display: inline-block;
@@ -51,11 +39,9 @@ h1 {
     transform: translateY(40%);
 }
 
-.petal {
-    width: 10vw;
-    max-width: 50px;
-    height: 10vw;
-    max-height: 50px;
+.petal{
+    width: 50px;
+    height: 50px;
     background: #fe7696;
     border-radius: 0px 50%;
     position: absolute;
@@ -64,45 +50,35 @@ h1 {
     transform-origin: bottom right;
     animation: zhanki2 10s infinite;
 }
-
-.petal:nth-child(2) {
+.petal:nth-child(2){
     transform-origin: right bottom;
     transform: rotate(90deg);
     background: #fe7696;
     left: -10px;
     animation: zhanki1 10s infinite;
 }
-
-.petal:nth-child(3) {
-    width: 8vw;
-    max-width: 40px;
-    height: 8vw;
-    max-height: 40px;
+.petal:nth-child(3){
+    width: 40px;
+    height: 40px;
     z-index: 1;
     top: -20px;
     background: #f03a64;
     transform-origin: bottom right;
     animation: zhanki2 10s infinite;
 }
-
-.petal:nth-child(4) {
+.petal:nth-child(4){
     transform: rotate(90deg);
-    width: 8vw;
-    max-width: 40px;
-    height: 8vw;
-    max-height: 40px;
+    width: 40px;
+    height: 40px;
     z-index: 1;
     top: -20px;
     background: #f03a64;
     transform-origin: bottom right;
     animation: zhanki1 10s infinite;
 }
-
-.petal:nth-child(5) {
-    width: 10vw;
-    max-width: 50px;
-    height: 10vw;
-    max-height: 50px;
+.petal:nth-child(5){
+    width: 50px;
+    height: 50px;
     border-radius: 20px;
     left: 20px;
     top: -30px;
@@ -110,15 +86,13 @@ h1 {
     background: #d1123f;
 }
 
-.leaf {
+.leaf{
     position: absolute;
-    top: 30vw;
-    left: -25vw;
+    top: 120px;
+    left: -115px;
 }
-
-.stem {
-    width: 50vw;
-    max-width: 240px;
+.stem{
+    width: 240px;
     height: 40px;
     background: transparent;
     border: 8px solid #8ac78a;
@@ -126,73 +100,45 @@ h1 {
     border-radius: 50% 50%;
     transform: rotate(100deg);
 }
-
-.leafs {
-    width: 10vw;
-    max-width: 50px;
-    height: 8vw;
-    max-height: 40px;
+.leafs{
+    width: 50px;
+    height: 40px;
     border-radius: 0px 50%;
     background: #77a377;
     position: absolute;
     top: 0;
-    left: 20vw;
+    left: 100px;
     z-index: 0;
 }
-
-.leafs:nth-child(2) {
-    width: 8vw;
-    max-width: 40px;
-    height: 4vw;
-    max-height: 20px;
+.leafs:nth-child(2){
+    width: 40px;
+    height: 20px;
     top: 40px;
-    left: 28vw;
+    left: 140px;
     transform: rotate(120deg);
 }
 
-@keyframes yid {
-    50% {
+@keyframes yid{
+    50%{
         transform: translateY(35%);
     }
-    100% {
+    100%{
         transform: translateY(40%);
     }
 }
-
-@keyframes zhanki1 {
-    50% {
+@keyframes zhanki1{
+    50%{
         transform: rotate(110deg);
     }
-    100% {
+    100%{
         transform: rotate(90deg);
     }
 }
-
-@keyframes zhanki2 {
-    50% {
+@keyframes zhanki2{
+    50%{
         transform: rotate(-20deg);
     }
-    100% {
+    100%{
         transform: rotate(0deg);
-    }
-}
-
-/* Responsive tweaks */
-@media (max-width: 600px) {
-    .container {
-        position: static;
-        transform: none;
-        padding-top: 10vh;
-    }
-
-    .rose {
-        position: relative;
-        transform: none;
-        margin: 0 auto;
-        display: block;
-    }
-
-    h1 {
-        font-size: 6vw;
     }
 }
